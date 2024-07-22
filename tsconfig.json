@@ -17,6 +17,14 @@
     "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
+    "paths": {
+      "bets-widget": [
+        "./dist/bets-widget"
+      ],
+      "sport-widget": [
+        "./dist/sport-widget"
+      ]
+    },
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": [

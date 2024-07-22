@@ -1,0 +1,20 @@
+<div class="page" [ngClass]="currentLayout">
+    
+    <ng-container *ngFor="let section of pageConfig.sections">
+        <ng-container [ngSwitch]="section.name">
+            <ng-container *ngSwitchCase="PageSectionName.Header">
+                <app-header></app-header>
+            </ng-container>
+            <ng-container *ngSwitchCase="PageSectionName.ControlPanel">
+                <button (click)="changeLayout()">change layout</button>
+            </ng-container>
+            <ng-container *ngSwitchCase="PageSectionName.Widgets">
+                <app-widget-list></app-widget-list>
+            </ng-container>
+            <ng-container *ngSwitchCase="PageSectionName.Footer">
+                <app-footer></app-footer>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+
+</div>
